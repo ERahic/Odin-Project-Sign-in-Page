@@ -1,0 +1,255 @@
+:root{
+        --color: #e6007e;
+        --txt: rgb(185, 185, 185)
+    }
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: gold;
+    
+    /* outline: 1px solid red; */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height:100vh;
+    width:100vw;
+}
+
+.container, .logo {
+    display: grid;
+    width: 40vw;
+}
+
+#message {
+    display: none;
+    background-color: black;
+    color: gold;
+    position:sticky;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+#message, h3 {
+    margin-left: 5%;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* Green to confirm password requirements */
+.valid {
+    color: green !important;
+}
+
+.valid:before {
+    position: relative;
+    left: -10px;
+    content: "✔";
+}
+
+/* Red text when password requirements aren't met */
+.invalid {
+    color: red !important;
+}
+.invalid:before {
+    position: relative;
+    left: -10px;
+    content: "✖";
+}
+
+/* left side of the website */
+.left-side {
+    background-image: url(./javascript.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    top: 35vh;
+    gap: 1vw;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: gold;
+    text-align: center;
+}
+
+.gold-lily {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* right side */
+
+.right-side {
+    width: 60vw;
+    background-color: black;
+    display: grid;
+    justify-content: center;
+}
+
+.test-text {
+    width: 90%;
+    font-size: 2rem;
+    color: gold;
+    margin-left: 10%;
+    margin-top: 3rem;
+}
+
+.sign-up-now {
+    margin: 40px 0 80px;
+    
+}
+
+.begin {
+    color: gold;
+    font-size: 1.5rem;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+/* form */
+
+.form {
+    background-color: rgb(6, 6, 6);
+    box-shadow: 0 10px 20x -2px rgb(22, 22, 22);
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    opacity: 50%;
+    margin-left: 10%;
+    padding: 5px;
+}
+
+.form-title {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+input {
+    background-color: rgb(2, 2, 2);
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid gold;
+}
+
+button {
+    background-color: black;
+    color: gold;
+    font-weight: 700;
+    font-size: 1.2em;
+    border: 2px solid gold;
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin: 40px 0;
+    margin-left: 10%;
+}
+
+.log-in-left {
+    margin-left: 10%;
+}
+
+
+/* mobile version */
+@media only screen and (max-width: 600px) {
+    * {
+        background-color: black;
+    }
+    .container {
+        display: flex;
+        flex-flow: column;
+        height: auto;
+        text-align: center;
+    }
+    .left-side {
+        width: 100vw;
+        height: 30vh;
+        display: flex;
+        
+    }
+    .logo {
+        width: 100vw;
+        height: auto;
+        position: static;
+        
+        background-color: rgba(0, 0, 0, 0.5)
+    }
+    .gold-lily {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .right-side {
+        display: flex;
+        flex-flow: column;
+        height: auto;
+        width: 90vw;
+        text-align: center;
+    }
+    .left{
+        padding: 10px 20px;
+    }
+    .sign-up-now{
+        padding: 20px 0;
+        margin: 0;
+    }
+    .form{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+    }
+    .input{
+        text-align: left;
+        width: auto;
+        font-size: 0.8em;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        font-size: 0.9rem;
+        height: 1.5rem;
+        width: 50vw;
+    }
+    .button,
+    .log-in{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+    button{
+        margin-bottom: 10px;
+        width: 60vw;
+        padding: 10px 5px;
+    }
+}
